@@ -143,7 +143,7 @@ $clients = $manager->getAllClients();
                             $isValidToday = ($isFlagActive && $isWithinDates);
 
                             if ($isValidToday) {
-                                $statusBadge = '<span class="badge badge-active">🟢 Activa Hoy</span>';
+                                $statusBadge = '<span class="badge badge-active">🟢 Activa</span>';
                             } elseif (!$isFlagActive) {
                                 $statusBadge = '<span class="badge badge-inactive">🔴 Inactiva</span>';
                             } elseif ($today < $lic['start_date']) {

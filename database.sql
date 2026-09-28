@@ -57,11 +57,11 @@ CREATE TABLE IF NOT EXISTS `licenses` (
 -- --------------------------------------------------------
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`) VALUES
-(1, 'Administrador Principal', 'admin@licencias.com', '$2y$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVym502LN6z4dE7yXo/vX4v2', 'admin'),
-(2, 'Segundo Administrador', 'admin2@licencias.com', '$2y$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVym502LN6z4dE7yXo/vX4v2', 'admin'),
-(3, 'Cliente Empresa Alfa', 'cliente@alfa.com', '$2y$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVym502LN6z4dE7yXo/vX4v2', 'client'),
-(4, 'Cliente Beta Solutions', 'cliente@beta.com', '$2y$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVym502LN6z4dE7yXo/vX4v2', 'client')
-ON DUPLICATE KEY UPDATE `id`=`id`;
+(1, 'Administrador Principal', 'admin@licencias.com', '$2y$12$pk/fKNyk9jTQHy4FVTYTdeEYupOb/79xlUiDdlMi5rf9BfoRBo9x6', 'admin'),
+(2, 'Segundo Administrador', 'admin2@licencias.com', '$2y$12$pk/fKNyk9jTQHy4FVTYTdeEYupOb/79xlUiDdlMi5rf9BfoRBo9x6', 'admin'),
+(3, 'Cliente Empresa Alfa', 'cliente@alfa.com', '$2y$12$pk/fKNyk9jTQHy4FVTYTdeEYupOb/79xlUiDdlMi5rf9BfoRBo9x6', 'client'),
+(4, 'Cliente Beta Solutions', 'cliente@beta.com', '$2y$12$pk/fKNyk9jTQHy4FVTYTdeEYupOb/79xlUiDdlMi5rf9BfoRBo9x6', 'client')
+ON DUPLICATE KEY UPDATE `password`='$2y$12$pk/fKNyk9jTQHy4FVTYTdeEYupOb/79xlUiDdlMi5rf9BfoRBo9x6';
 
 INSERT INTO `products` (`id`, `name`, `code`, `description`, `status`) VALUES
 (1, 'Sistema ERP Cloud', 'ERP-CLOUD', 'Sistema de gestión empresarial para PYMES', 'active'),
